@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2ks5q8rit7wu"]
+
+[ext_resource type="Texture2D" uid="uid://dfj0tjgax3bcr" path="res://ASSETS/BG/PNG/Battleground3/Bright/Battleground3.png" id="1_nspxb"]
+[ext_resource type="Script" path="res://MainMenuFix.gd" id="1_t45w4"]
+[ext_resource type="Texture2D" uid="uid://cr6ghaqwkpdac" path="res://Main Menu/tiles2.png" id="2_tsoop"]
+[ext_resource type="Texture2D" uid="uid://0in32w7bua" path="res://Main Menu/tiles.png" id="3_vhe1x"]
+[ext_resource type="Texture2D" uid="uid://bwrnobpkyfu0e" path="res://Main Menu/Princess.png" id="4_sloh7"]
+[ext_resource type="Texture2D" uid="uid://c0f7veqnay6e8" path="res://Main Menu/Vampire.png" id="5_aacli"]
+[ext_resource type="Texture2D" uid="uid://dbua36rvihqrl" path="res://Main Menu/Knight.png" id="6_iryw2"]
+[ext_resource type="FontFile" uid="uid://b3e5c1j1spe46" path="res://Font/upheavtt.ttf" id="7_o8u5x"]
+[ext_resource type="AudioStream" uid="uid://cnf8tp47n78n0" path="res://ASSETS/AUDIO/Backsound stage/backsound stage.mp3" id="9_iy8bh"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t45w4")
+
+[node name="Backgound" type="Sprite2D" parent="."]
+modulate = Color(0.35, 0.35, 0.35, 1)
+position = Vector2(961, 540)
+texture = ExtResource("1_nspxb")
+
+[node name="Tile2" type="Sprite2D" parent="."]
+position = Vector2(253, 945)
+texture = ExtResource("2_tsoop")
+
+[node name="Tile" type="Sprite2D" parent="."]
+position = Vector2(1669, 941)
+texture = ExtResource("3_vhe1x")
+
+[node name="Princess" type="Sprite2D" parent="."]
+position = Vector2(1776, 661)
+texture = ExtResource("4_sloh7")
+
+[node name="Vampire" type="Sprite2D" parent="."]
+position = Vector2(1638, 579)
+texture = ExtResource("5_aacli")
+
+[node name="Knight" type="Sprite2D" parent="."]
+position = Vector2(250, 591)
+texture = ExtResource("6_iryw2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -210.0
+offset_right = 417.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_o8u5x")
+theme_override_font_sizes/font_size = 120
+text = "Ksatria Wira"
+horizontal_alignment = 1
+
+[node name="StartGame" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_o8u5x")
+theme_override_font_sizes/font_size = 80
+text = "Start Game"
+flat = true
+
+[node name="Option" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_o8u5x")
+theme_override_font_sizes/font_size = 80
+text = "Option"
+flat = true
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_o8u5x")
+theme_override_font_sizes/font_size = 80
+text = "Exit"
+flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_iy8bh")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

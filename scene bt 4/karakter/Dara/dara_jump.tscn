@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://rsj3kipuvsue"]
+
+[ext_resource type="Texture2D" uid="uid://ctu6ec7ri8fs1" path="res://asset/dara/Jump.png" id="1_h8fqd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nydmf"]
+atlas = ExtResource("1_h8fqd")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pkxb"]
+atlas = ExtResource("1_h8fqd")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxhn0"]
+atlas = ExtResource("1_h8fqd")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgflp"]
+atlas = ExtResource("1_h8fqd")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh27o"]
+atlas = ExtResource("1_h8fqd")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hca48"]
+atlas = ExtResource("1_h8fqd")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cyd0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nydmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pkxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxhn0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgflp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh27o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hca48")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fw4bj"]
+radius = 15.0
+height = 78.0
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cyd0x")
+autoplay = "default"
+frame_progress = 0.151372
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, 23)
+shape = SubResource("CapsuleShape2D_fw4bj")

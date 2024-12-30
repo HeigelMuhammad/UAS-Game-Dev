@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8jjtvnj8kj8q"]
+
+[ext_resource type="Texture2D" uid="uid://ctm50r8bslcpo" path="res://ASSETS/Gems and Coins/2.png" id="1_n8cyt"]
+[ext_resource type="AudioStream" uid="uid://c2w0epaitfjgd" path="res://ASSETS/AUDIO/Sound Effect/17.mp3" id="2_of8fe"]
+
+[sub_resource type="GDScript" id="GDScript_6pddp"]
+script/source = "extends Area2D
+
+@onready var game_manager = %GameManager
+
+
+func _on_body_entered(body):
+	
+	game_manager.add_point() 
+	queue_free()
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro05m"]
+atlas = ExtResource("1_n8cyt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnxwc"]
+atlas = ExtResource("1_n8cyt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne35k"]
+atlas = ExtResource("1_n8cyt")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvehi"]
+atlas = ExtResource("1_n8cyt")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvtf3"]
+atlas = ExtResource("1_n8cyt")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy0k7"]
+atlas = ExtResource("1_n8cyt")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3grry"]
+atlas = ExtResource("1_n8cyt")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3i6l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro05m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnxwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne35k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvehi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvtf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy0k7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3grry")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pkpwb"]
+radius = 14.1421
+
+[node name="Coins" type="Area2D"]
+collision_mask = 2
+script = SubResource("GDScript_6pddp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5.72205e-06, -0.999994)
+scale = Vector2(3.03125, 3.03125)
+sprite_frames = SubResource("SpriteFrames_g3i6l")
+autoplay = "default"
+frame_progress = 0.464214
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pkpwb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_of8fe")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sniowh6w6aw3"
+path="res://.godot/imported/Sound attack 5.mp3-2002f26e4a46008e1b51841b9ce41567.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/AUDIO/Sound Effect/Sound attack 5.mp3"
+dest_files=["res://.godot/imported/Sound attack 5.mp3-2002f26e4a46008e1b51841b9ce41567.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

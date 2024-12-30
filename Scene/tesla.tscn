@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://cgk2dd3nsxna4"]
+
+[ext_resource type="Texture2D" uid="uid://5f7ucaifi40b" path="res://ASSETS/AUDIO/Backsound stage/6 Traps/6.png" id="1_bsi7m"]
+[ext_resource type="PackedScene" uid="uid://cduyeyvnlu7se" path="res://Scene/kill_zone.tscn" id="2_11jvr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hgsb"]
+atlas = ExtResource("1_bsi7m")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7eja4"]
+atlas = ExtResource("1_bsi7m")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2by0"]
+atlas = ExtResource("1_bsi7m")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn6ir"]
+atlas = ExtResource("1_bsi7m")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb75k"]
+atlas = ExtResource("1_bsi7m")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ytob"]
+atlas = ExtResource("1_bsi7m")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hwc4"]
+atlas = ExtResource("1_bsi7m")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yff6r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hgsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7eja4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2by0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn6ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb75k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ytob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hwc4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0jyq3"]
+radius = 9.0
+height = 38.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_665lj"]
+radius = 21.2132
+
+[node name="Tesla" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -47)
+scale = Vector2(1.95833, 1.95833)
+sprite_frames = SubResource("SpriteFrames_yff6r")
+autoplay = "default"
+frame_progress = 0.525904
+
+[node name="KillZone" parent="." instance=ExtResource("2_11jvr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(1, -16)
+shape = SubResource("CapsuleShape2D_0jyq3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(1, -38)
+shape = SubResource("CircleShape2D_665lj")

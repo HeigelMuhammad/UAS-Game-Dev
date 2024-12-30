@@ -1,0 +1,126 @@
+[gd_scene load_steps=17 format=3 uid="uid://dro41v7e1bdoe"]
+
+[ext_resource type="Texture2D" uid="uid://dypyroovoaesp" path="res://assets/orc/Walk.png" id="1_lpsvm"]
+[ext_resource type="Script" path="res://enemy/orc.gd" id="1_oe5qu"]
+[ext_resource type="Texture2D" uid="uid://83hbl4gnucjc" path="res://assets/orc/Attack_1.png" id="2_np3tj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtxb4"]
+atlas = ExtResource("2_np3tj")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mceg0"]
+atlas = ExtResource("2_np3tj")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njmrq"]
+atlas = ExtResource("2_np3tj")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8s4ku"]
+atlas = ExtResource("2_np3tj")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nklrm"]
+atlas = ExtResource("1_lpsvm")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dahvq"]
+atlas = ExtResource("1_lpsvm")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k07ce"]
+atlas = ExtResource("1_lpsvm")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fd2o"]
+atlas = ExtResource("1_lpsvm")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qxa7"]
+atlas = ExtResource("1_lpsvm")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmphi"]
+atlas = ExtResource("1_lpsvm")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvfja"]
+atlas = ExtResource("1_lpsvm")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wknum"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtxb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mceg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njmrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8s4ku")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nklrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dahvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k07ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fd2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qxa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmphi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvfja")
+}],
+"loop": true,
+"name": &"walk ",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0i7vm"]
+radius = 28.387
+height = 73.1917
+
+[node name="orc" type="CharacterBody2D"]
+script = ExtResource("1_oe5qu")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(173, 67.75)
+scale = Vector2(1.28646, 1.34896)
+sprite_frames = SubResource("SpriteFrames_wknum")
+animation = &"attack"
+autoplay = "attack"
+frame_progress = 0.241919
+
+[node name="Timer" type="Timer" parent="sprite"]
+wait_time = 10.0
+one_shot = true
+
+[node name="RayCast2D" type="RayCast2D" parent="sprite"]
+position = Vector2(-5.44129, 18.8132)
+target_position = Vector2(40.4211, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(165, 108)
+rotation = 1.5812
+scale = Vector2(0.774227, 0.685944)
+shape = SubResource("CapsuleShape2D_0i7vm")
+
+[connection signal="timeout" from="sprite/Timer" to="." method="_on_timer_timeout"]

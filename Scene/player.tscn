@@ -1,0 +1,222 @@
+[gd_scene load_steps=30 format=3 uid="uid://bdgm0vduceytg"]
+
+[ext_resource type="Texture2D" uid="uid://bqcdgbtbd324t" path="res://ASSETS/WARRIOR/Warrior_2/Idle.png" id="1_hirh8"]
+[ext_resource type="Script" path="res://player.gd" id="1_rmbop"]
+[ext_resource type="Texture2D" uid="uid://bl0lmein2l07l" path="res://ASSETS/WARRIOR/Warrior_2/Attack_1.png" id="3_8e7ms"]
+[ext_resource type="Texture2D" uid="uid://rcosx078ke6b" path="res://ASSETS/WARRIOR/Warrior_2/Jump.png" id="3_heo0r"]
+[ext_resource type="Texture2D" uid="uid://dmigbcn2l1fjv" path="res://ASSETS/WARRIOR/Warrior_2/Run.png" id="4_xk3u7"]
+[ext_resource type="Texture2D" uid="uid://ci1b6ufu3oaqo" path="res://ASSETS/WARRIOR/Warrior_2/Protect.png" id="5_lltcp"]
+[ext_resource type="AudioStream" uid="uid://doia8mu1sl1yd" path="res://ASSETS/AUDIO/Sound Effect/13.mp3" id="8_keav6"]
+[ext_resource type="AudioStream" uid="uid://bmca2xnwks4hu" path="res://ASSETS/AUDIO/Sound Effect/18.mp3" id="8_ou8vh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yi2g"]
+atlas = ExtResource("3_8e7ms")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmava"]
+atlas = ExtResource("3_8e7ms")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pdvc"]
+atlas = ExtResource("3_8e7ms")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn7we"]
+atlas = ExtResource("3_8e7ms")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdc3e"]
+atlas = ExtResource("1_hirh8")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwwod"]
+atlas = ExtResource("1_hirh8")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1ib3"]
+atlas = ExtResource("1_hirh8")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2yja"]
+atlas = ExtResource("1_hirh8")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0vwt"]
+atlas = ExtResource("1_hirh8")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt3ke"]
+atlas = ExtResource("3_heo0r")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkkhy"]
+atlas = ExtResource("5_lltcp")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijq8w"]
+atlas = ExtResource("4_xk3u7")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eilp1"]
+atlas = ExtResource("4_xk3u7")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kydi"]
+atlas = ExtResource("4_xk3u7")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yowp"]
+atlas = ExtResource("4_xk3u7")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvq28"]
+atlas = ExtResource("4_xk3u7")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7yxm"]
+atlas = ExtResource("4_xk3u7")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hjgaf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yi2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmava")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pdvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn7we")
+}],
+"loop": false,
+"name": &"attacking",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdc3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwwod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1ib3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2yja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0vwt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt3ke")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkkhy")
+}],
+"loop": true,
+"name": &"protect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijq8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eilp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kydi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yowp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvq28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7yxm")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3nw4r"]
+radius = 19.0
+height = 98.0
+
+[sub_resource type="Animation" id="Animation_ccxju"]
+resource_name = "attack"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [null, null, ExtResource("3_8e7ms")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ni7rs"]
+_data = {
+"attack": SubResource("Animation_ccxju")
+}
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_rmbop")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(18, -99)
+scale = Vector2(2.03125, 2.03125)
+sprite_frames = SubResource("SpriteFrames_hjgaf")
+animation = &"attacking"
+autoplay = "idle"
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -48)
+shape = SubResource("CapsuleShape2D_3nw4r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ni7rs")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-9, -11)
+zoom = Vector2(1.5, 1.5)
+limit_bottom = 960
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_keav6")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ou8vh")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

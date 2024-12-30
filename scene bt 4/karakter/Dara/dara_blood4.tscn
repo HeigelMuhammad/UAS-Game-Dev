@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://0hl4b0f8plyu"]
+
+[ext_resource type="Texture2D" uid="uid://mhx5ypnxners" path="res://asset/dara/Blood_Charge_4.png" id="1_jiesh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyxb8"]
+atlas = ExtResource("1_jiesh")
+region = Rect2(192, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0226"]
+atlas = ExtResource("1_jiesh")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cub4k"]
+atlas = ExtResource("1_jiesh")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3lxr"]
+atlas = ExtResource("1_jiesh")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwctq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyxb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0226")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cub4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3lxr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_pndm5"]
+b = Vector2(-14, -1)
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jwctq")
+frame_progress = 0.11007
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("SegmentShape2D_pndm5")

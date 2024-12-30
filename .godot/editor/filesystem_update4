@@ -1,0 +1,18 @@
+res://stagefinal.tscn
+res://Dara.gd
+res://stage_1.tscn
+res://Main Menu.tscn
+res://Scene/player.tscn
+res://Scene/orc_shaman.tscn
+res://level2 baru.tscn
+res://Scene/coins.tscn
+res://scene bt 4/background/batle_4.tscn
+res://Dara.tscn
+res://stage3.tscn
+res://coin_st2.tscn
+res://coin_st3.tscn
+res://stage3.gd
+res://player.gd
+res://game_manager_st3.gd
+res://GameManagerStage2.gd
+res://kill_zone.gd

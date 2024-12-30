@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://cofp8rat5ncj4"]
+
+[ext_resource type="Texture2D" uid="uid://bgalea37lpvj6" path="res://ASSETS/ORC/Craftpix_Orc/Orc_Berserk/Idle.png" id="1_pwgxj"]
+[ext_resource type="Script" path="res://orc.gd" id="1_tf5yc"]
+[ext_resource type="PackedScene" uid="uid://cduyeyvnlu7se" path="res://Scene/kill_zone.tscn" id="2_e8dh1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfsv2"]
+atlas = ExtResource("1_pwgxj")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3aygj"]
+atlas = ExtResource("1_pwgxj")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2tlg"]
+atlas = ExtResource("1_pwgxj")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acfds"]
+atlas = ExtResource("1_pwgxj")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqkec"]
+atlas = ExtResource("1_pwgxj")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6xskf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfsv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3aygj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2tlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acfds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqkec")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aiv32"]
+radius = 25.0
+height = 84.0
+
+[node name="Orc" type="Node2D"]
+script = ExtResource("1_tf5yc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, -29)
+scale = Vector2(1.63021, 1.63021)
+sprite_frames = SubResource("SpriteFrames_6xskf")
+autoplay = "default"
+frame_progress = 0.428338
+
+[node name="KillZone" parent="." instance=ExtResource("2_e8dh1")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(-4, -1)
+shape = SubResource("CapsuleShape2D_aiv32")
+
+[node name="RayCastKanan" type="RayCast2D" parent="."]
+target_position = Vector2(37, 0)
+
+[node name="RayCastKiri" type="RayCast2D" parent="."]
+target_position = Vector2(-50, 0)

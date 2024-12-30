@@ -1,0 +1,130 @@
+[gd_scene load_steps=12 format=3 uid="uid://dfvsr0cwmwd4x"]
+
+[ext_resource type="Script" path="res://scene bt 4/background/batle_4.gd" id="1_16xk4"]
+[ext_resource type="Texture2D" uid="uid://dgs5qu1osv0lt" path="res://ASSETS/BG/PNG/Battleground2/Bright/Battleground2.png" id="1_s1dtc"]
+[ext_resource type="Texture2D" uid="uid://wnk6dwvq7ga4" path="res://ASSETS/VILLAGE/PNG/Building/Ladder_02.png" id="2_k8hpo"]
+[ext_resource type="PackedScene" uid="uid://bdgm0vduceytg" path="res://Scene/player.tscn" id="4_kg1yl"]
+[ext_resource type="PackedScene" uid="uid://b4sa8un2s4vq8" path="res://Dara.tscn" id="5_k4llo"]
+[ext_resource type="Texture2D" uid="uid://r4tg6tccpb5p" path="res://Environment/Wooden_Barrel.png" id="6_1ax0n"]
+[ext_resource type="PackedScene" uid="uid://cgk2dd3nsxna4" path="res://Scene/tesla.tscn" id="7_f15lb"]
+[ext_resource type="AudioStream" uid="uid://cnf8tp47n78n0" path="res://ASSETS/AUDIO/Backsound stage/backsound stage.mp3" id="9_3r48c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1oqcf"]
+radius = 51.5121
+height = 128.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gb4ff"]
+a = Vector2(3.1217, 177.951)
+b = Vector2(-0.000244141, -179.512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28ceh"]
+size = Vector2(1220.5, 94)
+
+[node name="background" type="Node2D"]
+script = ExtResource("1_16xk4")
+
+[node name="Battleground6" type="Sprite2D" parent="."]
+modulate = Color(0.72, 0.72, 0.72, 1)
+position = Vector2(529, 371)
+scale = Vector2(0.812037, 0.812037)
+texture = ExtResource("1_s1dtc")
+
+[node name="Battleground7" type="Sprite2D" parent="."]
+modulate = Color(0.72, 0.72, 0.72, 1)
+position = Vector2(-1030, 371)
+scale = Vector2(0.812037, 0.812037)
+texture = ExtResource("1_s1dtc")
+
+[node name="Battleground8" type="Sprite2D" parent="."]
+modulate = Color(0.72, 0.72, 0.72, 1)
+position = Vector2(2088, 371)
+scale = Vector2(0.812037, 0.812037)
+texture = ExtResource("1_s1dtc")
+
+[node name="Ladder01" type="Sprite2D" parent="."]
+position = Vector2(45, 576)
+scale = Vector2(0.599432, 0.6875)
+texture = ExtResource("2_k8hpo")
+
+[node name="Ladder02" type="Sprite2D" parent="."]
+position = Vector2(229, 576)
+scale = Vector2(0.599432, 0.6875)
+texture = ExtResource("2_k8hpo")
+
+[node name="Ladder03" type="Sprite2D" parent="."]
+position = Vector2(413, 576)
+scale = Vector2(0.599432, 0.6875)
+texture = ExtResource("2_k8hpo")
+
+[node name="Ladder04" type="Sprite2D" parent="."]
+position = Vector2(596, 576)
+scale = Vector2(0.599432, 0.6875)
+texture = ExtResource("2_k8hpo")
+
+[node name="Ladder05" type="Sprite2D" parent="."]
+position = Vector2(780, 576)
+scale = Vector2(0.599432, 0.6875)
+texture = ExtResource("2_k8hpo")
+
+[node name="Ladder06" type="Sprite2D" parent="."]
+position = Vector2(965, 576)
+scale = Vector2(0.599432, 0.6875)
+texture = ExtResource("2_k8hpo")
+
+[node name="Ladder07" type="Sprite2D" parent="."]
+position = Vector2(1143, 576)
+scale = Vector2(0.599432, 0.6875)
+texture = ExtResource("2_k8hpo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1119, 541)
+scale = Vector2(0.640625, 0.640625)
+shape = SubResource("CapsuleShape2D_1oqcf")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1155, 451)
+scale = Vector2(0.640625, 0.640625)
+shape = SubResource("SegmentShape2D_gb4ff")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.999969, 456)
+scale = Vector2(0.640625, 0.640625)
+shape = SubResource("SegmentShape2D_gb4ff")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(35.0001, 537)
+scale = Vector2(0.640625, 0.640625)
+shape = SubResource("CapsuleShape2D_1oqcf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(551.75, 625)
+shape = SubResource("RectangleShape2D_28ceh")
+
+[node name="Player" parent="." instance=ExtResource("4_kg1yl")]
+position = Vector2(48, 386)
+
+[node name="WoodenBarrel" type="Sprite2D" parent="."]
+position = Vector2(1115, 537)
+scale = Vector2(0.640625, 0.640625)
+texture = ExtResource("6_1ax0n")
+
+[node name="WoodenBarrel2" type="Sprite2D" parent="."]
+position = Vector2(36.0002, 535)
+scale = Vector2(0.640625, 0.640625)
+texture = ExtResource("6_1ax0n")
+
+[node name="Dara" parent="." instance=ExtResource("5_k4llo")]
+position = Vector2(829, 578)
+
+[node name="Tesla4" parent="." instance=ExtResource("7_f15lb")]
+position = Vector2(191, 575)
+
+[node name="Tesla5" parent="." instance=ExtResource("7_f15lb")]
+position = Vector2(960, 576)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_3r48c")
+volume_db = 23.771
+autoplay = true

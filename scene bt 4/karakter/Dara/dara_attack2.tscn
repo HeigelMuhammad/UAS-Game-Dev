@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2ijfopsj4nvl"]
+
+[ext_resource type="Texture2D" uid="uid://cdw0yjwq4gsu6" path="res://asset/dara/Attack_2.png" id="1_b7ky6"]
+[ext_resource type="Texture2D" uid="uid://dp0tcr5ws0fds" path="res://asset/dara/Attack_3.png" id="2_8obh3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sninq"]
+atlas = ExtResource("1_b7ky6")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbrx8"]
+atlas = ExtResource("1_b7ky6")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpqpd"]
+atlas = ExtResource("1_b7ky6")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oyl2"]
+atlas = ExtResource("2_8obh3")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ylu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sninq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbrx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpqpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oyl2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_68w6n"]
+radius = 15.0
+height = 76.0
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7ylu5")
+autoplay = "default"
+frame_progress = 0.521486
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(4, 26)
+shape = SubResource("CapsuleShape2D_68w6n")

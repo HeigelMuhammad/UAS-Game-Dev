@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://1bof5g1j5dyf"]
+
+[ext_resource type="Texture2D" uid="uid://d1tmw61uym4w6" path="res://asset/dara/Hurt.png" id="1_s4eyc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpgaa"]
+atlas = ExtResource("1_s4eyc")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qntdp"]
+atlas = ExtResource("1_s4eyc")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqu2u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpgaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qntdp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sbwsv"]
+radius = 13.0
+height = 82.0
+
+[node name="dara_hurt" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cqu2u")
+autoplay = "default"
+frame_progress = 0.764744
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, 25)
+shape = SubResource("CapsuleShape2D_sbwsv")

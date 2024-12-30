@@ -1,0 +1,44 @@
+res://enemy/enemy.tscn::34bddc86976643faa2a3828f1857f56e::1735396552::res://.godot/exported/133200997/export-7a7ef7eb2aa2d13d5f77526465e49dfc-enemy.scn
+res://enemy/node_2d.tscn::c0fb62355e15ed025c4920cda9ad59d1::1735396552::res://.godot/exported/133200997/export-438be163c7f8eea5467a9dd866d9223e-node_2d.scn
+res://enemy/orc.tscn::307df27f9df2b785b5923953681764f6::1735396552::res://.godot/exported/133200997/export-452918be87b367fc5414d080b0517fe3-orc.scn
+res://Main Menu/main_menu.tscn::82a74ca4c1dae8e6b99911a683f3aa2c::1735018054::res://.godot/exported/133200997/export-ed43cd7fe34e5fed8391c2fd8e17bfae-main_menu.scn
+res://Scene/coins.tscn::73d60bd06f0185ec08d2b739377bc62d::1735526481::res://.godot/exported/133200997/export-e4b5cc7c1d08144fd6e9209490da85f7-coins.scn
+res://Scene/kill_zone.tscn::7fc5aab0ac12f03c2fff60aaec90efe0::1735476132::res://.godot/exported/133200997/export-26dc94dd86b8536f8858cffd2dd900de-kill_zone.scn
+res://Scene/Main Menu.tscn::b3afab7725878af42afd5027098c1689::1735397506::res://.godot/exported/133200997/export-fc9fdcbdd0be3922c357c6312ef3f4e7-Main Menu.scn
+res://Scene/orc.tscn::5ca1c68935f831688bf5ef08c3dfee64::1735450138::res://.godot/exported/133200997/export-f6f66db3b3af01ccec1a844ce5a9eae0-orc.scn
+res://Scene/orc_2.tscn::b1efe36183f0b8da69bfa09e2e111d3e::1735450138::res://.godot/exported/133200997/export-b8449f80af21560c05c5cf4349d9571a-orc_2.scn
+res://Scene/orc_shaman.tscn::8a3f49f73e7bad5335d435645a60c977::1735526481::res://.godot/exported/133200997/export-1c23d108f6fe30f2d349dfb5d95b5b59-orc_shaman.scn
+res://Scene/player.tscn::ad04a2839609ed5dd3337872e148624a::1735526481::res://.godot/exported/133200997/export-338e31791d3fabafa55f665a3bef2a04-player.scn
+res://Scene/player_attack.tscn::e50b8f56c9ca8b976106e4d7f1f9d4c1::1735450137::res://.godot/exported/133200997/export-65ca03ca9bf74da05df53dc4371f0033-player_attack.scn
+res://Scene/stage1.tscn::a25d20bdf46de6aede82ea37da4b379c::1735118385::res://.godot/exported/133200997/export-4c4dc4f64952095e542a17405c85ccde-stage1.scn
+res://Scene/stage_1.tscn::e87cef0a9eea3654ccee7fe46c4fd4aa::1735450137::res://.godot/exported/133200997/export-c9262ef06e5a6f44aee6a4e579d036c3-stage_1.scn
+res://Scene/tesla.tscn::63a6a7999339f8a434fb27d2af3a771f::1735480478::res://.godot/exported/133200997/export-9259129d13b66040c1d7d312007b532a-tesla.scn
+res://Scene/test_attack.tscn::666298f0ef977e8440ad664b1836d71f::1735450137::res://.godot/exported/133200997/export-3b0b750bb827415e45d68a94576d7491-test_attack.scn
+res://Scene/test_kill.tscn::509f1d7d45d06925075b4b3d2122a096::1735450138::res://.godot/exported/133200997/export-769ab1f0dc036847620446eb1f0814fd-test_kill.scn
+res://scene bt 4/background/batle_4.tscn::af0456392e74c5c47da7166733e1ca8e::1735526481::res://.godot/exported/133200997/export-60635288e56678acb600837330021b21-batle_4.scn
+res://scene bt 4/background/Level3.tscn::b7616012e309ffd6e13feec212b5bb80::1735488289::res://.godot/exported/133200997/export-bca25e4856f188c7803590dccfc5a7be-Level3.scn
+res://scene bt 4/karakter/Dara/dara_attack1.tscn::6b5f5baf0ae243ea8e189f226349b76b::1735097637::res://.godot/exported/133200997/export-98ec6bb00089789de3207deef058b7d0-dara_attack1.scn
+res://scene bt 4/karakter/Dara/dara_attack2.tscn::f52e5ef491455a73bfe077767cd38b81::1735097637::res://.godot/exported/133200997/export-97136c79787cc698fb58afa030f95ea5-dara_attack2.scn
+res://scene bt 4/karakter/Dara/dara_attack3.tscn::40ebc0857d2e75d4a833a1da3a9ae8d1::1735097637::res://.godot/exported/133200997/export-d2c74590e4f352bc371f72ddcef7822c-dara_attack3.scn
+res://scene bt 4/karakter/Dara/dara_blood1.tscn::54b763a5e0576f8c939d041f85a54363::1735097637::res://.godot/exported/133200997/export-ed3f1c55368cfba49ca816811453cb42-dara_blood1.scn
+res://scene bt 4/karakter/Dara/dara_blood2.tscn::a4c9a740fcdde5097b9ba38a59169f2b::1735097637::res://.godot/exported/133200997/export-33aa3cd3ec213234b4eee8328f455aab-dara_blood2.scn
+res://scene bt 4/karakter/Dara/dara_blood3.tscn::be29a5f6927be20c785d7e66e61c0795::1735097637::res://.godot/exported/133200997/export-660e93869c54278a9f674b3306e2b001-dara_blood3.scn
+res://scene bt 4/karakter/Dara/dara_blood4.tscn::57ce900531015ed8f359f814791206ea::1735097637::res://.godot/exported/133200997/export-4c423c30935577dc17686f03b2dba37c-dara_blood4.scn
+res://scene bt 4/karakter/Dara/dara_dead.tscn::d124817f30753d6004487bb342e62d14::1735097637::res://.godot/exported/133200997/export-27b0f6723cd63b18de7c30b8d999c452-dara_dead.scn
+res://scene bt 4/karakter/Dara/dara_hurt.tscn::02c238ce917727e8bbae3e932c9c423e::1735097637::res://.godot/exported/133200997/export-fad66e788bcc2b2190ce1310075f1b42-dara_hurt.scn
+res://scene bt 4/karakter/Dara/dara_idle.tscn::4269264220b90ff91fe267bd5e9af596::1735097637::res://.godot/exported/133200997/export-07940b1a5903eea5649a6907640c6ba2-dara_idle.scn
+res://scene bt 4/karakter/Dara/dara_jump.tscn::c9b65ee8788c0bda9edf4399a21eb6c3::1735097637::res://.godot/exported/133200997/export-dc30304e61598c5ef98bb4681c1c8693-dara_jump.scn
+res://scene bt 4/karakter/Dara/dara_run.tscn::0a847eae883031cc534d056f2986d15b::1735097637::res://.godot/exported/133200997/export-e03dcf9caa800bd8b35d71f603ce866d-dara_run.scn
+res://scene bt 4/karakter/Dara/dara_walk.tscn::f636a19cbff030050cd22aa4f6776787::1735097637::res://.godot/exported/133200997/export-b64d46e211f52bdc22a183399b11d3ec-dara_walk.scn
+res://scene bt 4/karakter/enemy/enemy_UTAMA.tscn::70753e3cfe776edf826a4b9088b540e8::1735110056::res://.godot/exported/133200997/export-1395ed1fb5ad2eb96930d79fb10a38d2-enemy_UTAMA.scn
+res://scene bt 4/karakter/enemy/enemy_walk.tscn::fb87840df0967786a9211a3cb2850fb8::1735110230::res://.godot/exported/133200997/export-12e5b88c6db883f01b2cd977ec9c2f3c-enemy_walk.scn
+res://batle_4.tscn::3a047acac7906eb8fe76a300bce3be51::1735396066::res://.godot/exported/133200997/export-4ca0d843e6948bfebaf4c8c4b563aa92-batle_4.scn
+res://boss.tscn::d543c5c52b61df15aae76247bfa930e0::1735476134::res://.godot/exported/133200997/export-5e7f0b6541c0059ea24f9d326f1dd0a5-boss.scn
+res://coin_st2.tscn::ab0aef4d628db974106706d3b8370078::1735526482::res://.godot/exported/133200997/export-70be9944d8771380e4db69c64c29ae8e-coin_st2.scn
+res://coin_st3.tscn::59e5deb0268b26710cc80b09eb6c280c::1735526482::res://.godot/exported/133200997/export-1cfdad57076f7d374df80861708cbfb9-coin_st3.scn
+res://Dara.tscn::5b3468cdaaf9d8b8afd9fdb1eefe96aa::1735526481::res://.godot/exported/133200997/export-0f7f83e64ed72e23e949b07caca6b0c2-Dara.scn
+res://level2 baru.tscn::60a729e75d435c6ad9645ce9138d4adc::1735526481::res://.godot/exported/133200997/export-5ba2195a5467ff80ccd0c6a0b7bd2eb8-level2 baru.scn
+res://Main Menu.tscn::fa6d4683246c3835716cf4dc447f366b::1735526481::res://.godot/exported/133200997/export-a33d09f771cd04e34b900b4e4f2bfce2-Main Menu.scn
+res://stage3.tscn::409985498207b3e5ac856101c7cac19c::1735526481::res://.godot/exported/133200997/export-d0c35495aa385ca0da59bc795cf1286e-stage3.scn
+res://stagefinal.tscn::d84e9d15be2ad8d222170d6de31f79f7::1735526482::res://.godot/exported/133200997/export-c365fa7a5b823200d6104b95ced56da9-stagefinal.scn
+res://stage_1.tscn::7f98d6daa1737f41d57cccd44b73e5eb::1735526480::res://.godot/exported/133200997/export-c9da8081b103f8e0c968d0996c6ff177-stage_1.scn

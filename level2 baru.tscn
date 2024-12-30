@@ -1,0 +1,552 @@
+[gd_scene load_steps=53 format=3 uid="uid://dch1ytri7b8tm"]
+
+[ext_resource type="Texture2D" uid="uid://dggwta5dl3mbq" path="res://Platformer/Ground_02.png" id="1_pto1i"]
+[ext_resource type="Texture2D" uid="uid://bj63eogrcnuts" path="res://Battleground1.png" id="1_whoq3"]
+[ext_resource type="Texture2D" uid="uid://cnpo0nk314cy7" path="res://ASSETS/VILLAGE/PNG/Platformer/Ground_04.png" id="2_8qb8a"]
+[ext_resource type="Texture2D" uid="uid://dsxtwt47u7gys" path="res://Platformer/Ground_08.png" id="2_w5q1r"]
+[ext_resource type="Texture2D" uid="uid://cbwvuu3iorb61" path="res://ASSETS/VILLAGE/PNG/Platformer/Ground_08.png" id="2_ywh5i"]
+[ext_resource type="Texture2D" uid="uid://lfo6ou76338r" path="res://Platformer/Ground_04.png" id="3_v3e2g"]
+[ext_resource type="Texture2D" uid="uid://lfp5qdsdovok" path="res://Platformer/Ground_11.png" id="4_i764m"]
+[ext_resource type="Texture2D" uid="uid://chsnf1dg08vgp" path="res://Platformer/Ground_09.png" id="5_g8jnk"]
+[ext_resource type="Texture2D" uid="uid://ddqafxiwfer3u" path="res://Platformer/Ground_13.png" id="6_ia788"]
+[ext_resource type="Texture2D" uid="uid://dn6gghu80dir0" path="res://Platformer/Ground_06.png" id="7_xqle5"]
+[ext_resource type="Texture2D" uid="uid://bji46gsl8t0mu" path="res://PNG/birch_3.png" id="11_n20vy"]
+[ext_resource type="Texture2D" uid="uid://rfs8d16r304h" path="res://PNG/birch_1.png" id="12_omrds"]
+[ext_resource type="Texture2D" uid="uid://dtxjc80hrkvkm" path="res://PNG/middle_lane_tree3.png" id="13_6n3rn"]
+[ext_resource type="Texture2D" uid="uid://d07so2ygw7wcr" path="res://Environment/Rock_05.png" id="14_jkyx6"]
+[ext_resource type="Texture2D" uid="uid://bigi33nqeny30" path="res://Environment/Rock_06.png" id="15_06ugs"]
+[ext_resource type="Texture2D" uid="uid://c4voohh8q2pcr" path="res://Environment/Rock_04.png" id="16_qd4su"]
+[ext_resource type="Texture2D" uid="uid://ku6e8n7sp0f4" path="res://Environment/Rock_01.png" id="17_6lnqc"]
+[ext_resource type="Texture2D" uid="uid://0bafdiyvc41" path="res://Environment/Rock_03.png" id="18_8tnuu"]
+[ext_resource type="Texture2D" uid="uid://kxid51mm300w" path="res://Environment/Rock_02.png" id="19_ybf5t"]
+[ext_resource type="PackedScene" uid="uid://bdgm0vduceytg" path="res://Scene/player.tscn" id="20_bnlwu"]
+[ext_resource type="Texture2D" uid="uid://c6i7sgmkiyr8u" path="res://Environment/Rock_07.png" id="20_eusau"]
+[ext_resource type="PackedScene" uid="uid://cduyeyvnlu7se" path="res://Scene/kill_zone.tscn" id="21_lpkd3"]
+[ext_resource type="Texture2D" uid="uid://bm42gwn4e8811" path="res://Environment/Rock_08.png" id="21_vuaaj"]
+[ext_resource type="PackedScene" uid="uid://cgk2dd3nsxna4" path="res://Scene/tesla.tscn" id="22_gu3p8"]
+[ext_resource type="PackedScene" uid="uid://d2urtjnts4y70" path="res://Scene/orc_shaman.tscn" id="24_q36fn"]
+[ext_resource type="FontFile" uid="uid://b3e5c1j1spe46" path="res://Font/upheavtt.ttf" id="25_ql7pt"]
+[ext_resource type="Texture2D" uid="uid://ds2ehajhcn51k" path="res://Environment/Wooden_Crate.png" id="27_ct6sl"]
+[ext_resource type="Script" path="res://GameManagerStage2.gd" id="28_w01dv"]
+[ext_resource type="AudioStream" uid="uid://du54nycsngis" path="res://PNG/ASSETS/AUDIO/Backsound stage/backsound stage.mp3" id="30_1yj6l"]
+[ext_resource type="PackedScene" uid="uid://dqry5oxqd60ok" path="res://coin_st2.tscn" id="30_wwi4n"]
+[ext_resource type="AudioStream" uid="uid://pehv4js54ga8" path="res://ASSETS/AUDIO/Sound Effect/16.mp3" id="31_hql82"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sd8ci"]
+texture = ExtResource("2_8qb8a")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_db1kj"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_sd8ci")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5kf5p"]
+texture = ExtResource("27_ct6sl")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_eo2he"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_5kf5p")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtnxn"]
+texture = ExtResource("2_ywh5i")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_bmppu"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_gtnxn")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etpl1"]
+texture = ExtResource("1_pto1i")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_gtiyh"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_etpl1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l021q"]
+texture = ExtResource("2_w5q1r")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_vl0f1"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 0
+sources/0 = SubResource("TileSetAtlasSource_l021q")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xmy4"]
+texture = ExtResource("3_v3e2g")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_3pdw2"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_6xmy4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p1ip8"]
+texture = ExtResource("4_i764m")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_32qle"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_p1ip8")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsqy8"]
+texture = ExtResource("5_g8jnk")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_431t6"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wsqy8")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cht4i"]
+texture = ExtResource("6_ia788")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_saado"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_cht4i")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0qo1"]
+texture = ExtResource("7_xqle5")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_h53ys"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_r0qo1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jrku"]
+size = Vector2(5748.5, 20)
+
+[node name="Node2D2" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+offset_right = 40.0
+offset_bottom = 40.0
+rotation = -0.0018172
+texture = ExtResource("1_whoq3")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+offset_left = -1920.0
+offset_top = 3.0
+offset_bottom = 1083.0
+rotation = -0.0018172
+texture = ExtResource("1_whoq3")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+offset_left = 1918.0
+offset_top = -3.0
+offset_right = 3838.0
+offset_bottom = 1077.0
+rotation = -0.0018172
+texture = ExtResource("1_whoq3")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+offset_left = 3836.0
+offset_top = -5.0
+offset_right = 5756.0
+offset_bottom = 1075.0
+rotation = -0.0018172
+texture = ExtResource("1_whoq3")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+offset_left = 5756.0
+offset_top = -9.0
+offset_right = 7676.0
+offset_bottom = 1071.0
+rotation = -0.0018172
+texture = ExtResource("1_whoq3")
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_db1kj")
+format = 2
+layer_0/tile_data = PackedInt32Array(262160, 0, 0, 393228, 0, 0, 393248, 0, 0)
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_eo2he")
+format = 2
+layer_0/tile_data = PackedInt32Array(393221, 2, 0, 196630, 2, 0, 196626, 2, 0, 327714, 2, 0, 327693, 2, 0, 327694, 2, 0, 327719, 2, 0, 327720, 2, 0, 262184, 2, 0, 262185, 2, 0, 327721, 2, 0, 196649, 2, 0)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_bmppu")
+format = 2
+layer_0/tile_data = PackedInt32Array(458757, 3, 0, 458762, 3, 0, 262166, 3, 0, 458782, 3, 0, 458777, 3, 0)
+
+[node name="ground2" type="TileMap" parent="."]
+position = Vector2(0, 1)
+tile_set = SubResource("TileSet_gtiyh")
+format = 2
+layer_0/tile_data = PackedInt32Array(458761, 0, 0, 393230, 0, 0, 262162, 0, 0, 262165, 0, 0, 458781, 0, 0, 393250, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 393229, 0, 0, 262161, 0, 0, 393249, 0, 0)
+
+[node name="ground8" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_vl0f1")
+format = 2
+layer_0/tile_data = PackedInt32Array(458762, 0, 0, 262166, 0, 0, 458782, 0, 0, 458757, 0, 0, 458777, 0, 0)
+
+[node name="ground4" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_3pdw2")
+format = 2
+layer_0/tile_data = PackedInt32Array(458760, 2, 0, 458780, 2, 0, 393228, 2, 0, 262160, 2, 0, 458776, 2, 0)
+
+[node name="ground11" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_32qle")
+format = 2
+layer_0/tile_data = PackedInt32Array(393231, 0, 0, 393232, 0, 0, 262163, 0, 0, 262164, 0, 0, 393251, 0, 0, 393252, 0, 0, 393253, 0, 0, 393254, 0, 0, 393255, 0, 0, 393256, 0, 0, 393257, 0, 0, 393258, 0, 0, 393259, 0, 0, 393260, 0, 0)
+
+[node name="ground9" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_431t6")
+format = 2
+layer_0/tile_data = PackedInt32Array(524296, 0, 0, 524316, 0, 0, 524300, 0, 0, 327696, 0, 0, 458764, 0, 0, 524312, 0, 0, 458784, 0, 0, 524320, 0, 0)
+
+[node name="ground13" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_saado")
+format = 2
+layer_0/tile_data = PackedInt32Array(524298, 0, 0, 327702, 0, 0, 393238, 0, 0, 458774, 0, 0, 524310, 0, 0, 524318, 0, 0, 524293, 0, 0, 524313, 0, 0)
+
+[node name="ground6" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_h53ys")
+format = 2
+layer_0/tile_data = PackedInt32Array(524297, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 524304, 0, 0, 524303, 0, 0, 524302, 0, 0, 393233, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 327701, 0, 0, 393237, 0, 0, 393236, 0, 0, 393235, 0, 0, 393234, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 524309, 0, 0, 524308, 0, 0, 524307, 0, 0, 524306, 0, 0, 524305, 0, 0, 458769, 0, 0, 524317, 0, 0, 458786, 0, 0, 524322, 0, 0, 524323, 0, 0, 458787, 0, 0, 458788, 0, 0, 524324, 0, 0, 458789, 0, 0, 524325, 0, 0, 524326, 0, 0, 458790, 0, 0, 458791, 0, 0, 524327, 0, 0, 524292, 0, 0, 524291, 0, 0, 524290, 0, 0, 524288, 0, 0, 524289, 0, 0, 458765, 0, 0, 524301, 0, 0, 327697, 0, 0, 524321, 0, 0, 458785, 0, 0, 458792, 0, 0, 458793, 0, 0, 458794, 0, 0, 458795, 0, 0, 458796, 0, 0, 524332, 0, 0, 524331, 0, 0, 524330, 0, 0, 524329, 0, 0, 524328, 0, 0)
+
+[node name="Birch3" type="Sprite2D" parent="."]
+position = Vector2(119, 770)
+texture = ExtResource("11_n20vy")
+
+[node name="Birch1" type="Sprite2D" parent="."]
+position = Vector2(2615, 394)
+scale = Vector2(1.1236, 1.20388)
+texture = ExtResource("12_omrds")
+
+[node name="MiddleLaneTree3" type="Sprite2D" parent="."]
+position = Vector2(4678.25, 613.75)
+scale = Vector2(1.29679, 1.22763)
+texture = ExtResource("13_6n3rn")
+
+[node name="Rock05" type="Sprite2D" parent="."]
+position = Vector2(333, 1014)
+texture = ExtResource("14_jkyx6")
+
+[node name="Rock06" type="Sprite2D" parent="."]
+position = Vector2(610, 1065)
+texture = ExtResource("15_06ugs")
+
+[node name="Rock04" type="Sprite2D" parent="."]
+position = Vector2(1215, 1039)
+texture = ExtResource("16_qd4su")
+
+[node name="Rock01" type="Sprite2D" parent="."]
+position = Vector2(2480, 737)
+texture = ExtResource("17_6lnqc")
+
+[node name="Rock03" type="Sprite2D" parent="."]
+position = Vector2(2228, 984)
+texture = ExtResource("18_8tnuu")
+
+[node name="Rock07" type="Sprite2D" parent="."]
+position = Vector2(2712, 944)
+texture = ExtResource("14_jkyx6")
+
+[node name="Rock02" type="Sprite2D" parent="."]
+position = Vector2(1875, 1009)
+texture = ExtResource("19_ybf5t")
+
+[node name="Rock08" type="Sprite2D" parent="."]
+position = Vector2(146, 1105)
+texture = ExtResource("18_8tnuu")
+
+[node name="Rock09" type="Sprite2D" parent="."]
+position = Vector2(2470, 969)
+texture = ExtResource("20_eusau")
+
+[node name="Rock10" type="Sprite2D" parent="."]
+position = Vector2(2077, 1110)
+texture = ExtResource("14_jkyx6")
+
+[node name="Rock11" type="Sprite2D" parent="."]
+position = Vector2(2767, 697)
+texture = ExtResource("18_8tnuu")
+
+[node name="Rock12" type="Sprite2D" parent="."]
+position = Vector2(3199, 1029)
+texture = ExtResource("14_jkyx6")
+
+[node name="Rock13" type="Sprite2D" parent="."]
+position = Vector2(3724, 1049)
+texture = ExtResource("14_jkyx6")
+
+[node name="Rock14" type="Sprite2D" parent="."]
+position = Vector2(3866, 994)
+texture = ExtResource("20_eusau")
+
+[node name="Rock15" type="Sprite2D" parent="."]
+position = Vector2(4511, 979)
+texture = ExtResource("17_6lnqc")
+
+[node name="Rock16" type="Sprite2D" parent="."]
+position = Vector2(4400, 1095)
+texture = ExtResource("15_06ugs")
+
+[node name="Rock17" type="Sprite2D" parent="."]
+position = Vector2(5040, 939)
+texture = ExtResource("16_qd4su")
+
+[node name="Rock18" type="Sprite2D" parent="."]
+position = Vector2(4813, 1034)
+texture = ExtResource("21_vuaaj")
+
+[node name="Rock19" type="Sprite2D" parent="."]
+position = Vector2(4702, 934)
+texture = ExtResource("15_06ugs")
+
+[node name="Player" parent="." instance=ExtResource("20_bnlwu")]
+position = Vector2(37, 475)
+
+[node name="KillZone" parent="." instance=ExtResource("21_lpkd3")]
+position = Vector2(2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(2869.75, 1171)
+shape = SubResource("RectangleShape2D_2jrku")
+
+[node name="Tesla4" parent="." instance=ExtResource("22_gu3p8")]
+position = Vector2(3764, 898)
+
+[node name="Tesla7" parent="." instance=ExtResource("22_gu3p8")]
+position = Vector2(5477, 767)
+
+[node name="Tesla5" parent="." instance=ExtResource("22_gu3p8")]
+position = Vector2(4560, 766)
+
+[node name="Tesla3" parent="." instance=ExtResource("22_gu3p8")]
+position = Vector2(1203, 897)
+
+[node name="Tesla6" parent="." instance=ExtResource("22_gu3p8")]
+position = Vector2(2011, 768)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("24_q36fn")]
+position = Vector2(434, 900)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("24_q36fn")]
+position = Vector2(2513, 512)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("24_q36fn")]
+position = Vector2(4957, 762)
+
+[node name="Game Manager Stage 2" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("28_w01dv")
+
+[node name="Score Label" type="Label" parent="Game Manager Stage 2"]
+offset_left = 5422.0
+offset_top = 487.0
+offset_right = 6036.0
+offset_bottom = 598.0
+theme_override_fonts/font = ExtResource("25_ql7pt")
+theme_override_font_sizes/font_size = 22
+text = "Selamat tuan!
+Anda mendapat koin pesugihan
+sebanyak X koin :)"
+
+[node name="Coin_st2" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(501, 860)
+
+[node name="Coin_st3" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(587, 858)
+
+[node name="Coin_st4" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1072, 864)
+
+[node name="Coin_st5" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1285, 861)
+
+[node name="Coin_st6" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1349, 862)
+
+[node name="Coin_st7" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1592, 735)
+
+[node name="Coin_st8" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1640, 733)
+
+[node name="Coin_st9" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1741, 612)
+
+[node name="Coin_st10" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1802, 612)
+
+[node name="Coin_st12" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1775, 565)
+
+[node name="Coin_st13" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1834, 564)
+
+[node name="Coin_st14" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1801, 516)
+
+[node name="Coin_st15" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(2141, 476)
+
+[node name="Coin_st16" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(2221, 473)
+
+[node name="Coin_st17" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(2649, 492)
+
+[node name="Coin_st18" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(2719, 488)
+
+[node name="Coin_st19" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(2782, 487)
+
+[node name="Coin_st22" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(3208, 860)
+
+[node name="Coin_st23" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(3277, 861)
+
+[node name="Coin_st24" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(3618, 872)
+
+[node name="Coin_st25" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(3692, 869)
+
+[node name="Coin_st26" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(3868, 871)
+
+[node name="Coin_st27" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(4154, 738)
+
+[node name="Coin_st28" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(4215, 736)
+
+[node name="Coin_st29" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(4290, 736)
+
+[node name="Coin_st30" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(4653, 730)
+
+[node name="Coin_st31" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(4714, 732)
+
+[node name="Coin_st32" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5023, 615)
+
+[node name="Coin_st35" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5095, 523)
+
+[node name="Coin_st36" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5165, 453)
+
+[node name="Coin_st37" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5239, 359)
+
+[node name="Coin_st38" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5316, 316)
+
+[node name="Coin_st39" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5454, 291)
+
+[node name="Coin_st40" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5454, 336)
+
+[node name="Coin_st41" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5456, 380)
+
+[node name="Coin_st42" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(5395, 279)
+
+[node name="Coin_st33" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(4833, 732)
+
+[node name="Coin_st34" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(4833, 732)
+
+[node name="Coin_st20" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(2576, 491)
+
+[node name="Coin_st21" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(2502, 485)
+
+[node name="Coin_st11" parent="." instance=ExtResource("30_wwi4n")]
+position = Vector2(1862, 612)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_1yj6l")
+volume_db = 24.0
+autoplay = true
+
+[node name="Btn_stage2" type="Button" parent="."]
+offset_left = 5607.0
+offset_top = 627.0
+offset_right = 5743.0
+offset_bottom = 650.0
+theme_override_fonts/font = ExtResource("25_ql7pt")
+text = "Stage 3 ->"
+flat = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 5421.0
+offset_top = 438.0
+offset_right = 5770.0
+offset_bottom = 487.0
+theme_override_fonts/font = ExtResource("25_ql7pt")
+theme_override_font_sizes/font_size = 22
+text = "Selamat tuan!
+Anda mendapat koin pesugihan
+"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_hql82")
+
+[connection signal="pressed" from="Btn_stage2" to="Player" method="_on_btn_stage_2_pressed"]

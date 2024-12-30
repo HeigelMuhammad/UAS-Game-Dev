@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnf8tp47n78n0"
+path="res://.godot/imported/backsound stage.mp3-54c3e9d7b9da39367751d54680ba202e.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/AUDIO/Backsound stage/backsound stage.mp3"
+dest_files=["res://.godot/imported/backsound stage.mp3-54c3e9d7b9da39367751d54680ba202e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
